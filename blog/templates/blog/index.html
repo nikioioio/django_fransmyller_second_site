@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock %}
+
+{% block title %}
+    My Blog
+{% endblock %}
+
+
+{% block content %}
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div class="header_logo">Mogo</div>
+
+
+                <nav class="nav">
+                    <a class="nav__link" href="">About</a>
+                    <a class="nav__link" href="">Service</a>
+                    <a class="nav__link" href="">BLog</a>
+                    <a class="nav__link" href="">Work</a>
+                    <a class="nav__link" href="">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="intro">
+        <div class="container">
+
+        </div>
+    </div>
+
+
+{% endblock %}
