@@ -5,8 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+
     <link rel="stylesheet" href="{% static "app.css" %}">
+    <script type="text/javascript" src="{% static "jquery-3.6.0.js" %}"></script>
+
     {% block css_files %}{% endblock %}
+
 </head>
 <body>
 <div class="main__contaner">
@@ -27,8 +31,23 @@
         </div>
     </header>
 
+    <div class="intro">
+        <div class="container">
 
-    {% block content %}{% endblock %}
+            <div class="intro__inner">
+                {% block content %}
+
+
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+
 </div>
 </body>
+
 </html>
+
+
