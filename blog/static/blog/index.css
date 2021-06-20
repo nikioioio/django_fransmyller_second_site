@@ -43,9 +43,9 @@
     content: counter(li);
     counter-increment: li;
     position: absolute;
-    left: -1.3em;
+    left: -1.4em;
     top: 50%;
-    margin-top: -1.3em;
+    margin-top: -.9em;
     background: #8FD4C1;
     height: 2em;
     width: 2em;
@@ -56,3 +56,43 @@
     border-radius: 2em;
     transition: all .3s ease-out;
 }
+
+
+.post_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10rem;
+    padding-left: 5rem;
+}
+
+
+
+.hidden_elements{
+    display: none;
+    position: absolute;
+    bottom: 0;
+}
+
+
+#ch1{
+    width: 40em;
+    justify-items: center;
+    /*left: 100px;*/
+}
+
+#ch2{
+    width: 20em;
+    justify-items: center;
+    /*left: 100px;*/
+}
+
+/*!*#ch3 #ch4{*!*/
+/*!*    align-self: end;*!*/
+/*!*}*!*/
+
+/*#ch3::before {*/
+/*  content: "";*/
+/*  flex: auto;*/
+/*}*/
+

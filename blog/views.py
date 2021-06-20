@@ -3,10 +3,10 @@ from django.shortcuts import render
 # Create your views here.
 
 def starting_page(request):
-    return render(request, "blog/index.html")
+    return render(request, "base.html")
 
 def posts(request):
-    pass
+    return render(request, "blog/index.html")
 
-def post_detail(request, ):
-    pass
+def post_detail(request, slug):
+    return render(request,"blog/post-detail.html")

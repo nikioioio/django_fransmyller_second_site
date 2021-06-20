@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}">
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+
+{% block content %}
+    <h1>Post Title</h1>
+
+    <address>By Nikita</address>
+    <div>Last update on <time>JULY 10th</time></div>
+
+    <main>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut beatae commodi deleniti eos eveniet, iure
+            labore nemo nostrum porro repellendus saepe ullam veniam! Autem dolore eius expedita sint tempora?</p>
+
+    </main>
+
+
+{% endblock %}
