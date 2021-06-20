@@ -11,14 +11,15 @@
 
 
 {% block content %}
-
-    {% include  "blog/includes/post.html" %}
-    {% include  "blog/includes/post.html" %}
-    {% include  "blog/includes/post.html" %}
-    {% include  "blog/includes/post.html" %}
+    {% for post in posts %}
+        {% include  "blog/includes/post.html" %}
+    {% endfor %}
 
 
-<script type="text/javascript" src="{% static "./blog/js/blog.js" %}"></script>
+
+
+
+    <script type="text/javascript" src="{% static "./blog/js/blog.js" %}"></script>
 {% endblock %}
 
 
