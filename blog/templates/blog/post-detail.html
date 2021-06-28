@@ -11,16 +11,14 @@
 
 
 {% block content %}
-    <h1>Post Title</h1>
+    <h1>{{ post.title}}</h1>
 
-    <address>By Nikita</address>
-    <div>Last update on <time>JULY 10th</time></div>
+    <address>{{ post.author}}</address>
+    <div>Post added <time>{{ post.date }}</time></div>
 
     <main>
 
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deserunt eum id ipsa neque, nostrum
-                numquam odio praesentium. Asperiores distinctio doloremque, eveniet itaque modi nihil ratione
-                voluptatum! Laudantium, porro possimus.</p>
+        <p>{{ post.content }}</p>
 
     </main>
 

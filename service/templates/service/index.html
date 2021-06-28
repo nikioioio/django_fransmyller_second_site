@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+    <h1>csdcsd</h1>
+
+    {#    <form method="post" id='test' enctype="multipart/form-data">#}
+    {#        {% csrf_token %}#}
+    {#        <input type="file" name="myfile">#}
+    {#        <button type="submit">Upload</button>#}
+    {#        <input type="hidden" value="video34"/>#}
+    {#        <input type='submit' value='Test button'/>#}
+    {#        <div id='message'>Initial text</div>#}
+    {#    </form>#}
+
+
+    <form id="data">
+{#        <label for="docn">#}
+{#            <input type="text" id="docn" placeholder="Please enter document name">#}
+{#        </label>#}
+
+        <label for="docc">
+            <input type="file" id="doc" name="docu">
+        </label>
+
+        <button type="button" onclick="enterdata()">Submit</button>
+
+    </form>
+
+
+    <script>
+        function enterdata() {
+
+            var data1 = new FormData()
+            data1.append('dcn', $('#docn').val())
+            data1.append('dc', $('#doc').val())
+            data1.append('docf', $('#doc')[0].files[0])
+
+            var token = '{{ csrf_token }}';
+            alert('csrf generated');
+
+            $.ajax({
+                type: 'POST',
+                url: 'upload/',
+                data: data1,
+                processData: false,
+                contentType: false,
+                headers: {'X-CSRFToken': token},
+                success: function () {
+                    alert("Added");
+                }
+            })
+
+        }
+    </script>
+    <script type="text/javascript" src="{% static "./service/js/service.js" %}"></script>
+{% endblock %}

@@ -19,6 +19,13 @@ $(document).ready(function () {
     },function (event){
              $(event.delegateTarget).height(defHeiht)
             $(event.delegateTarget).children(".hidden_elements").css({'display':'none'})
+    });
+
+
+
+
+    $('.pagenav-item').click(function (event){
+        $(event.delegateTarget).addClass('active')
     })
 })
 

@@ -17,6 +17,17 @@
 
 
 
+    <div class="pagenav">
+
+        {% for val in counter %}
+                    <a class="pagenav-item" href="{% url "posts-page" val %}">{{ val }}</a>
+        {% endfor %}
+{#        <a class="pagenav-item" href="#">&lt;</a>#}
+{#        <a class="pagenav-item  active" href="{% url "posts-page" 1 %}">1</a>#}
+{#        <a class="pagenav-item" href="{% url "posts-page" 2 %}">2</a>#}
+{#        <a class="pagenav-item" href="{% url "posts-page" 3 %}">3</a>#}
+{#        <a class="pagenav-item" href="#">&gt;</a>#}
+    </div>
 
 
     <script type="text/javascript" src="{% static "./blog/js/blog.js" %}"></script>

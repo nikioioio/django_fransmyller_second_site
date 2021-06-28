@@ -1,6 +1,14 @@
 <ol class="rounded">
-    <li><a class='btn' href="{% url "post-detail-page" post.slug %}">
-        <h3>{{ post.title }}</h3>
+
+    <li>
+        <a class='btn' href="{% url "post-detail-page" post.slug %}">
+
+        <div class="post_area">
+
+            <h3>{{ post.title }}</h3>
+            <div class="counter">{{ post.number }}</div>
+        </div>
+
         <div class="post_area">
             <p>{{ post.excerpt }}</p>
 {#            <img src="" alt="Картинка">#}
@@ -10,9 +18,6 @@
         <div class="hidden_elements">
             <h3 id="ch1">Дата Создания {{ post.date }} </h3>
             <h3 id="ch2">Автор {{ post.author }} </h3>
-
-
-
         </div>
 
 
